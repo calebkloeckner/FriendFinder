@@ -132,7 +132,7 @@
     </div>
     <br>
     <div>
-        <button class="col-md-2 col-md-offset-2" id="submit" type="button" class="btn btn-primary btn-sm">Submit Your Answers</button>
+        <button class="col-md-2 col-md-offset-2" id="submit" type="button" data-toggle="modal" data-target="#myModal"  class="btn btn-primary btn-sm">Submit Your Answers</button>
     </div>
     <br>
     <br>
@@ -147,15 +147,15 @@
         </span>
         </div>
       </div>
-
+      
     <!-- jQuery -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <!-- Materialize Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script> -->
     <script>
         $("#submit").on("click", function(event) {
             console.log("working");
-            // $('#myModal').modal('show'); 
+            
             event.preventDefault();
             var newEvilGuy = 
             {
@@ -171,30 +171,29 @@
             console.log(newEvilGuy);
             $.post("/api/evilLeaders", newEvilGuy, function(data) {
                console.log(data);
+               var modalBody = $("#inside-modal").html(data);
+
+            
             });
         });
     </script>
-<!-- Button trigger modal -->
-<!-- <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-    Launch demo modal
-  </button>
+
 
 <div class="modal fade" tabindex="-1" role="dialog" id="myModal">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title">Modal title</h4>
+          <h4 class="modal-title">Your closest evil villian</h4>
         </div>
         <div class="modal-body">
-          <p>One fine body&hellip;</p>
+          <div id="inside-modal"></div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
         </div>
       </div>
     </div>
-  </div> -->
+  </div>
 </body>
 </html>

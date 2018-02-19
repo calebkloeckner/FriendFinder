@@ -38,13 +38,18 @@ module.exports = function (app) {
         newEvilLeader.name = evilLeaders[i].name;
         newEvilLeader.photo = evilLeaders[i].photo;
         newEvilLeader.description = evilLeaders[i].description;
+        newEvilLeader.originalDifference = totalDifference;
         console.log("===========", newEvilLeader);
-      };
+      } else {
+        console.log("Not the new evil leader");
+      }
+    
     };
 
     res.send(newEvilLeader);
+    
 
     console.log("You", req.body);
-    console.log(evilLeaders);
+    // console.log(evilLeaders);
   });
 };
