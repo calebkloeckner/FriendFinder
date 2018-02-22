@@ -86,7 +86,7 @@ var badGuys = [
     },
     {
         name: "Hans Gruber",
-        photo: "gruber.jpg",
+        photo: "./assets/images/gruber.jpg",
         score: [
             /* question 1 */ "1",
             /* question 2 */ "2",
