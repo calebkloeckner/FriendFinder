@@ -1,0 +1,26 @@
+{
+  "name": "friendfinder",
+  "version": "1.0.0",
+  "description": "The goal of this app is to find what evil leader you are closest to. Once all the questions are filled out you will be matched to your closest match. Do you have what it takes?",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/calebkloeckner/FriendFinder.git"
+  },
+  "author": "Caleb",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/calebkloeckner/FriendFinder/issues"
+  },
+  "homepage": "https://github.com/calebkloeckner/FriendFinder#readme"
+}
